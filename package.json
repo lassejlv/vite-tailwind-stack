@@ -1,9 +1,15 @@
 {
+  "packageManager": "pnpm",
   "dependencies": {
-    "vite": "4.5.0"
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "vite": "5.0.3"
   },
   "scripts": {
-    "dev": "vite",
+    "dev:all": "concurrently --kill-others \"vite\" \"pnpm run tailwind\"",
+    "dev": "node run.mjs",
+    "tailwind": "tailwindcss -i ./src/css/app.css -o ./src/dist/build.css --watch",
     "build": "vite build",
     "serve": "vite preview"
   }
