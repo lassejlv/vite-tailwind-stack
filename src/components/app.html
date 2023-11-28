@@ -1,10 +1,30 @@
-<div class="flex flex-col items-center justify-center min-h-screen select-none">
+<div class="flex flex-col items-center justify-center min-h-screen select-none page hidden" id="app">
    <h1 class="text-4xl font-bold mb-2">
       Vite + Tailwind CSS
    </h1>
    <p class="text-gray-300 text-2xl">Edit <span class="text-pink-400 font-mono">src/components/app.html</span> to start working on your app.</p>
 
-   <button href="https://github.com/lassejlv/vite-tailwind-stack" class="mt-4 bg-pink-500 hover:bg-pink-400 text-white font-bold py-2 px-4 rounded transition-colors duration-300">
-      <i class="fa-brands fa-github"></i>  Give a star on GitHub
-   </button>
+   <div class="flex space-x-3">
+      <button href="https://github.com/lassejlv/vite-tailwind-stack" class="mt-4 bg-pink-500 hover:bg-pink-400 text-white font-bold py-2 px-4 rounded transition-colors duration-300">
+         Give a star on GitHub
+       </button>
+       <button onclick="renderPage('about')" class="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 rounded transition-colors duration-300">
+          Render About Page
+       </button>
+   </div>
+</div>
+
+<div class="flex flex-col items-center justify-center min-h-screen select-none page hidden" id="about">
+   <h1 class="text-4xl font-bold mb-2">
+     About Page
+   </h1>
+   <p class="text-gray-300 text-2xl">
+      Example of the <span class="text-pink-400 font-mono">src/components/about.html</span> page.
+   </p>
+
+   <div class="flex space-x-3">
+       <button onclick="renderPage('app')" class="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 rounded transition-colors duration-300">
+          Render Home Page
+       </button>
+   </div>
 </div>
