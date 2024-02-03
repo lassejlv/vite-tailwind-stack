@@ -8,7 +8,8 @@
   },
   "scripts": {
     "dev:all": "concurrently --kill-others \"vite\" \"pnpm run tailwind\"",
-    "dev": "node run.mjs",
+    "dev": "node scripts/run.mjs",
+    "page": "node scripts/new.mjs",
     "tailwind": "tailwindcss -i ./src/css/app.css -o ./src/dist/build.css --watch",
     "build": "vite build",
     "serve": "vite preview"

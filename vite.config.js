@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-const includeHtml = require("./plugin");
+const includeHtml = require("./plugins/includer");
 
 export default defineConfig({
   root: "./src",

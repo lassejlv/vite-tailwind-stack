@@ -16,19 +16,3 @@ buttons.forEach((button) => {
   });
 });
 
-// renderPage api
-const renderPage = (page) => {
-  let currentPage = page;
-  const pages = document.querySelectorAll(".page");
-
-  pages.forEach((page) => {
-    if (page.id === currentPage) {
-      page.classList.remove("hidden")
-    } else {
-      page.classList.add("hidden")
-      console.log(`${page.id} is hidden`);
-    }
-  });
-};
-
-renderPage("app");
